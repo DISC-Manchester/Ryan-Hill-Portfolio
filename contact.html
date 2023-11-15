@@ -1,0 +1,170 @@
+<!Doctype html>
+<style>
+
+</style> 
+<html>
+<head>
+<center> <title> contact us page - contact </title> </center>
+
+<link rel="stylesheet" href="about me.css"</head>
+
+<body>
+<header> 
+<!--- this is my logo -->
+<img src="logo.gif" width = "250" height = "200" alt="Coding Logo"/>
+<!--this is the end of my logo-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<body>
+
+<!-- Full-screen menu overlay -->
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+    <li> <a href = "index.html"> Home </a> </li> 
+	<li> <a href = "about.html"> About </a> </li> 
+	<li> <a href = "Skills.html"> Skills </a> </li> 
+	<li> <a href = "contact.html"> Contact Us </a> </li> 
+	<li> <a href = "hobbies.html"> Hobbies </a> </li>
+    </div>
+</div>
+
+<!-- Button to open the full-screen menu overlay -->
+<button class="open-button" onclick="openNav()">Open Menu → </button>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+ </header>
+<main>
+<div class ="Coding banner">
+<center> <h1> Contact Us page </h1> <center>
+<marquee behavior="Slide" direction="left" bgcolor="05FCF4"
+scrollamount="25" loop= "1000"> Welcome to my website </marquee>
+
+<center> <img src="CodingBanner.gif" width = "1600" height = "500" alt="Coding banner"/> </center>
+
+
+<fieldset>
+
+
+
+ <form action="process_form.php" method="POST">
+ <br>
+<legend>Contact Form </legend>
+<br>
+<label> Name </label>
+
+<input type ="text" placeholder = "enter your full">
+
+<br>
+<label> Email </label>
+
+<input type ="email" placeholder = "enter your email">
+<br> 
+
+<br>
+<label> Password </label>
+
+<br> <input type ="password" placeholder = "enter your password">
+<br> 
+
+<br> 
+<label> Gender </label>
+<br>
+
+<br> <input type = "radio" name ="gender"> male <br>
+
+<br> <input type = "radio" name ="gender"> female <br>
+
+<br> <input type = "radio" name ="gender"> Prefer not to say <br>
+
+<br> 
+<label> Are you a Jedi or a civilian  </label>
+<br>
+
+<br> <input type = "radio" name ="Jedi"> Jedi <br>
+
+<br> <input type = "radio" name ="civilian"> Civilian <br>
+<br> <div class="popup" onclick="myFunction()">If you are a jedi then click me!
+  <span class="popuptext" id="myPopup">Execute Order 66!</span>
+</div> <br>
+
+<script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+<br> <label> Type of computer </label>  <br>
+<br><input type ="checkbox"> I have a laptop <br>
+<br><input type ="checkbox"> I have a desktop <br>
+<br><input type ="checkbox"> Tablet <br>
+
+<br> <label> Age </label>
+
+<select>
+<option> 0 - 20 </option>
+<option> 20 - 40 </option>
+<option> 40 - 60 </option>
+<option> 60+ </option>
+<br>
+</select>
+
+<br><br> <label> Send message </label>  <br>
+
+<br> <textarea< rows = "15" cols = "50" > </textarea> <br>
+
+<input type = "submit" value = "send">
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "send") 
+{
+    $name = $_send["name"];
+    $email = $_send["email"];
+    $Age= $_send["message"];
+	$type_of_computer =$_send["message"];
+
+    $to = "ryan.h@disc.ac.uk";
+    $subject = "Contact Form Submission from $name";
+    $messageBody = "Name: $name\nEmail: $email\n\n$message";
+
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $messageBody, $headers)) {
+        echo "Email sent successfully. Thank you!";
+    } else {
+        echo "Email sending failed. Please try again later.";
+    }
+}
+?>
+
+
+<input type = "reset" value = "clear">
+</form>
+
+</fieldset>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br>
+<footer>
+
+<a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRmTNrBPmVcxTddVXTMltqPfsMfzkFLJCrdXThHngbMtXxTvdfMNzZxdrbvbVfFpGQNrCml" class="fa fa-google"></a>
+<a href="https://www.linkedin.com/in/ryan-hill-6ab997241/" class="fa fa-linkedin"></a>
+<a href="https://twitter.com/BizAccountRyan" class="fa fa-twitter"></a>
+
+</footer>
+<br>
+
+
+</body>
