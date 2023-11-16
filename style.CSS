@@ -8,6 +8,7 @@ body {
 h1  {
 	
 	color: #05FCF4;
+  text-align: center;
 	
 	
 }
@@ -95,8 +96,7 @@ h2{
 	
 	color: #05FCF4; 
 	font-size: 150%
-	list-style-type:none;
-	float left;
+	list-style-type none;
 	padding-left:20px;
 	
 	
@@ -331,7 +331,7 @@ h2{
 		 color: #05FCF4; 
 	font-size: 100%;
 	list-style-type:none;
-	float left;
+	float: left;
 	padding-left:20px;
 		  
 		  
